@@ -33,7 +33,7 @@ export function Footer() {
               <li key={l.label}>
                 <Link
                   to={l.to}
-                  hash={l.hash}
+                  {...(l.hash ? { hash: l.hash } : {})}
                   className="text-sm opacity-70 transition-opacity hover:opacity-100"
                 >
                   {l.label}

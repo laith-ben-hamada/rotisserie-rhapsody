@@ -52,7 +52,7 @@ export function Navbar() {
             <Link
               key={l.label}
               to={l.to}
-              hash={l.hash}
+              {...(l.hash ? { hash: l.hash } : {})}
               className={`text-sm transition-opacity hover:opacity-60 ${
                 scrolled ? "text-foreground" : "text-charcoal-foreground"
               }`}
@@ -89,7 +89,7 @@ export function Navbar() {
               <Link
                 key={l.label}
                 to={l.to}
-                hash={l.hash}
+                {...(l.hash ? { hash: l.hash } : {})}
                 onClick={() => setOpen(false)}
                 className="border-b border-border/60 py-4 font-display text-2xl text-foreground last:border-0"
               >
