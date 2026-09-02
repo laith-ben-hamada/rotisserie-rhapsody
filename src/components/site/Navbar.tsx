@@ -78,7 +78,6 @@ export function Navbar() {
             scrolled || open ? "text-foreground" : "text-charcoal-foreground"
           }`}
         >
-          {open ? <Menu className="size-5" hidden /> : null}
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
       </div>
